@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap");
+
+:root {
+  --background: hsl(0, 8%, 14%);
+  --background-scnd: hsl(0, 3%, 21%);
+  --main: hsl(0, 42%, 94%);
+}
+
+body {
+  background-color: hsl(0, 42%, 94%);
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background-color: var(--background);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  transform: scale(0.7);
+  display: inline-block;
+}
+
+.hawk {
+  fill: hsl(19, 76%, 52%);
+}
+
+.dev-hawk {
+  fill: hsl(0, 42%, 94%);
+}
+
+.current {
+  color: hsl(0, 42%, 94%);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
+  display: block;
+  background-color: var(--main);
+  width: 1.7em;
+  height: 2px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::after {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::before {
+  top: 7px;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-color: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 350ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 0 1em 1em;
+}
+
+nav a {
+  color: hsl(19, 76%, 52%);
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: hsl(0, 42%, 94%);
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+  height: 100vh;
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out 250ms;
+}
+
+.bg-image {
+  display: flex;
+  background-image: url(/images/pexels-s-migaj-746386.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 300px;
+  background-color: hsla(0, 8%, 14%, 0.4);
+  color: hsl(0, 42%, 94%);
+  font-weight: bold;
+  border: 3px solid hsl(0, 42%, 94%);
+  border-radius: 10px;
+  max-width: 60%;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.hero-title {
+  font-size: 2.3em;
+}
+
+.body-text {
+  font-size: 1.1em;
+  max-width: 40ch;
+  text-align: justify;
+  margin: auto;
+  padding: 1em 1em 3em;
+}
+
+.w {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: hsl(19, 76%, 52%);
+}
+
+footer {
+  background-color: hsl(0, 8%, 14%);
+  color: hsl(0, 42%, 94%);
+  text-align: center;
+  font-size: 0.5em;
+  padding: 20px;
+  margin-bottom: 0px;
+}
