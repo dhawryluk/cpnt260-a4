@@ -124,7 +124,7 @@ nav a:hover {
 
 .bg-image {
   display: flex;
-  background-image: url(../images/pexels-s-migaj-746386.jpg);
+  background-image: url("../images/pexels-s-migaj-746386.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
