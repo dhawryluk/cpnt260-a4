@@ -4,10 +4,11 @@
   --background: hsl(0, 8%, 14%);
   --background-scnd: hsl(0, 3%, 21%);
   --main: hsl(0, 42%, 94%);
+  --accent: hsl(19, 76%, 52%);
 }
 
 body {
-  background-color: hsl(0, 42%, 94%);
+  background-color: var(--main);
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   display: flex;
@@ -32,15 +33,15 @@ header {
 }
 
 .hawk {
-  fill: hsl(19, 76%, 52%);
+  fill: var(--accent);
 }
 
 .dev-hawk {
-  fill: hsl(0, 42%, 94%);
+  fill: var(--main);
 }
 
 .current {
-  color: hsl(0, 42%, 94%);
+  color: var(--main);
 }
 
 .nav-toggle {
@@ -95,19 +96,12 @@ nav {
   transition: transform 350ms ease-in-out;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 nav li {
   margin: 0 0 1em 1em;
 }
 
 nav a {
-  color: hsl(19, 76%, 52%);
-  text-decoration: none;
+  color: var(--accent);
   font-size: 1.3rem;
   font-weight: 600;
   opacity: 0;
@@ -115,7 +109,7 @@ nav a {
 }
 
 nav a:hover {
-  color: hsl(0, 42%, 94%);
+  color: var(--main);
 }
 
 .nav-toggle:checked ~ nav {
@@ -142,9 +136,9 @@ nav a:hover {
   margin: auto;
   margin-top: 300px;
   background-color: hsla(0, 8%, 14%, 0.4);
-  color: hsl(0, 42%, 94%);
+  color: var(--main);
   font-weight: bold;
-  border: 3px solid hsl(0, 42%, 94%);
+  border: 3px solid var(--main);
   border-radius: 10px;
   max-width: 60%;
   padding: 20px 10px;
@@ -171,10 +165,28 @@ nav a:hover {
 }
 
 footer {
-  background-color: hsl(0, 8%, 14%);
-  color: hsl(0, 42%, 94%);
+  background-color: var(--background);
   text-align: center;
-  font-size: 0.5em;
   padding: 20px;
   margin-bottom: 0px;
+  font-weight: 600;
+}
+
+footer ul li a {
+  color: var(--accent);
+}
+
+.footerLinks {
+  font-size: 1.2em;
+  transition: opacity 150ms ease-in-out;
+  padding-bottom: 5px;
+}
+
+footer a:hover {
+  color: var(--main);
+}
+
+.copyright {
+  font-size: 0.4em;
+  color: var(--main);
 }
